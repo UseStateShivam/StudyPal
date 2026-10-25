@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: studypal-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - DATABASE_URL=sqlite:///./studypal.db
+      - SECRET_KEY=studypal_production_docker_secret_key_12345
+      - EMBEDDING_MODEL_NAME=all-MiniLM-L6-v2
+      - RETRIEVAL_METHOD=hybrid
+    volumes:
+      - studypal_data:/app/data
+      - studypal_models:/app/models/cache
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: studypal-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  studypal_data:
+  studypal_models:

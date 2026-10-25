@@ -1,0 +1,4 @@
+retrieval_method,precision_at_5,recall_at_5,mrr
+tfidf,0.35,1.0,1.0
+embedding,0.15,0.5,0.2583
+hybrid,0.35,1.0,1.0

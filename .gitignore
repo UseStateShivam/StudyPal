@@ -1,0 +1,32 @@
+# Environments
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Databases
+*.db
+*.sqlite3
+test_studypal.db
+
+# Storage & Models
+data/uploads/*
+!data/uploads/.gitkeep
+models/cache/*
+!models/cache/.gitkeep
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Testing & Reports cache
+.pytest_cache/
+.coverage
+htmlcov/
+node_modules/
+
+# Secrets
+.env

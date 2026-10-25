@@ -1,0 +1,23 @@
+{
+  "dataset": "educational_nlp_curriculum",
+  "n_samples": 6,
+  "tested_k": 3,
+  "silhouette_score": 0.2237,
+  "discovered_topics": [
+    {
+      "cluster_index": 0,
+      "label": "Regression Binary & Regression",
+      "keywords": "regression binary, regression, logistic, logistic regression, decision boundary"
+    },
+    {
+      "cluster_index": 1,
+      "label": "Weights & Squares Gradient",
+      "keywords": "weights, squares gradient, squares, regression ordinary, regression"
+    },
+    {
+      "cluster_index": 2,
+      "label": "Vector Machines & Vector",
+      "keywords": "vector machines, vector, trick hyperplane, trick, time"
+    }
+  ]
+}

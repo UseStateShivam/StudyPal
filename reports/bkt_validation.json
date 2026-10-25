@@ -1,0 +1,26 @@
+{
+  "parameters": {
+    "P(L0)": 0.2,
+    "P(T)": 0.15,
+    "P(G)": 0.25,
+    "P(S)": 0.1
+  },
+  "consecutive_correct_trajectory": [
+    0.2,
+    0.5526,
+    0.844,
+    0.9585,
+    0.9899,
+    0.9976
+  ],
+  "consecutive_incorrect_trajectory": [
+    0.8,
+    0.4457,
+    0.2323,
+    0.183,
+    0.1746,
+    0.1733
+  ],
+  "asymptotic_correct_valid": true,
+  "asymptotic_incorrect_valid": true
+}
